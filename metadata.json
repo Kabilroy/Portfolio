@@ -1,0 +1,6 @@
+{
+  "name": "Kabilan Portfolio",
+  "description": "Personal portfolio website for Kabilan, B.Tech IT student & Full-Stack Developer",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

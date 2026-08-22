@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #070709;
+    color: #f1f5f9;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar with Black, Red, and Thick Orange theme */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070709;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #241416;
+  border: 1px solid #ea580c40;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ea580c, #dc2626);
+}
+
+/* Infinite Marquee Animation for Skills */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 24s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Black-Red-Orange Glow and Card styling */
+.glow-orange {
+  box-shadow: 0 0 35px -8px rgba(249, 115, 22, 0.35);
+}
+
+.glow-red-orange {
+  box-shadow: 0 0 40px -10px rgba(220, 38, 38, 0.3);
+}
+
+.dark-card-lava {
+  background-color: #0e0d13;
+  border: 1px solid #231c26;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark-card-lava:hover {
+  border-color: rgba(249, 115, 22, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(249, 115, 22, 0.25);
+  transform: translateY(-3px);
+}
+
+/* Gradient text utility */
+.text-gradient-fire {
+  background: linear-gradient(135deg, #fb923c 0%, #f97316 40%, #ef4444 80%, #dc2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
