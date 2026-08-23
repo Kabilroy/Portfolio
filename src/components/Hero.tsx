@@ -67,15 +67,20 @@ export const Hero: React.FC = () => {
             <i className="fa-solid fa-arrow-right text-sm"></i>
           </a>
 
-          <button
-            id="hero-download-cv-btn"
-            type="button"
-            onClick={handleDownloadCv}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-[#120f17] hover:bg-[#1a1420] border-2 border-[#3d1a24] hover:border-orange-500 text-slate-100 hover:text-white font-semibold text-base transition-all duration-200 hover:-translate-y-0.5 shadow-md shadow-black/50 cursor-pointer"
-          >
-            <i className={`fa-solid ${downloading ? 'fa-spinner fa-spin text-orange-400' : 'fa-file-arrow-down text-orange-400'}`}></i>
-            <span>{downloading ? 'Downloading Resume...' : 'Download CV'}</span>
-          </button>
+<button
+  id="hero-download-cv-btn"
+  type="button"
+  onClick={() =>
+    window.open(
+      "https://drive.google.com/file/d/14Yn30_CfT6aPZfvTiEuKRjwmP22t1n4l/view?usp=sharing",
+      "_blank"
+    )
+  }
+  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-[#120f17] hover:bg-[#1a1420] border-2 border-[#3d1a24] hover:border-orange-500 text-slate-100 hover:text-white font-semibold text-base transition-all duration-200 hover:-translate-y-0.5 shadow-md shadow-black/50 cursor-pointer"
+>
+  <i className="fa-solid fa-file-arrow-down text-orange-400"></i>
+  <span>Download CV</span>
+</button>
         </div>
 
         {/* Quick Highlights Row */}
